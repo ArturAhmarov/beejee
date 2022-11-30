@@ -160,8 +160,8 @@ class TaskController
     {
         $this->data = $_POST;
 
-        $access = $_SESSION['auth'] ?? 'false';
-        if( $access ) {
+        $access = $_SESSION['auth'] ?? false;
+        if( ! $access ) {
             die('<div class="bg-danger">Ошибка нужно авторизоваться</div>');
         }
 

@@ -46,6 +46,6 @@ class UserController
     public function outAction()
     {
         session_destroy();
-        header('Location: http://beejee/');
+        print '<div class="bg-success">Выход осуществлен</div>';
     }
 }

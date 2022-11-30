@@ -4,11 +4,9 @@ namespace Lib;
 class DB
 {
     CONST HOST = 'localhost';
-    CONST PORT = 5432;
-    CONST DBNAME = 'beejee';
-    CONST USERNAME = 'root';
-    CONST PASSWORD = '123qwe';
-    CONST OPTIONS = [];
+    CONST DBNAME = 'arturpxq_beejee';
+    CONST USERNAME = 'arturpxq_beejee';
+    CONST PASSWORD = '2948996Artur.';
 
     /**
      * @var \PDO $connection
@@ -21,10 +19,9 @@ class DB
     public function connect(){
 
         self::$connection = new \PDO(
-            'pgsql:host=' . self::HOST . ';port=' . self::PORT . ';dbname=' . self::DBNAME,
+            'mysql:host=' . self::HOST . ';dbname=' . self::DBNAME,
             self::USERNAME,
-            self::PASSWORD,
-            self::OPTIONS
+            self::PASSWORD
         );
     }
 
